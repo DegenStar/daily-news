@@ -26,6 +26,16 @@ claude mcp add daily-news \
 cp -r openclaw-skill/daily-news ~/.openclaw/skills/6551-daily-news
 ```
 
+### Hermes Agent
+
+Zero-dependency skill (curl only), no MCP server needed:
+
+```bash
+cp -r hermes-skill/daily-news ~/.hermes/skills/research/daily-news
+```
+
+Then invoke it in Hermes with `/daily-news` or just ask for hot news.
+
 ---
 
 ## Let AI Review & Install For You
@@ -228,6 +238,8 @@ Edit config (macOS: `~/Library/Application Support/Claude/claude_desktop_config.
 | Windsurf | JSON config | Supported |
 | Cherry Studio | GUI | Supported |
 | Zed | JSON config | Supported |
+| Hermes Agent | SKILL.md (curl) | Supported |
+| OpenClaw | SKILL.md | Supported |
 
 ---
 
@@ -253,6 +265,9 @@ npx @modelcontextprotocol/inspector uv --directory /path/to/daily-news run daily
 │   ├── README_JA.md           # 日本語
 │   └── README_KO.md           # 한국어
 ├── openclaw-skill/daily-news/     # OpenClaw Skill
+├── hermes-skill/daily-news/       # Hermes Agent Skill (curl-only)
+│   ├── SKILL.md
+│   └── references/api.md
 ├── pyproject.toml
 ├── config.json
 └── src/daily_news_mcp/

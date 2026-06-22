@@ -26,6 +26,16 @@ claude mcp add daily-news \
 cp -r openclaw-skill/daily-news ~/.openclaw/skills/6551-daily-news
 ```
 
+### Hermes Agent
+
+依存関係ゼロの skill（curl のみ）。MCP サーバーは不要です：
+
+```bash
+cp -r hermes-skill/daily-news ~/.hermes/skills/research/daily-news
+```
+
+Hermes では `/daily-news` で呼び出すか、ホットニュースを直接尋ねてください。
+
 ---
 
 ## AI にレビュー＆インストールしてもらう
